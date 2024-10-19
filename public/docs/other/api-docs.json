@@ -1,0 +1,2611 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Pomelo Travel Company APIs",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/companydata": {
+            "post": {
+                "operationId": "getcompanydata",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/login": {
+            "post": {
+                "operationId": "login2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    
+                                },
+                                "type": "object",
+                                "example": {
+                                    "email": "strip23@gmail.com",
+                                    "password": "Asdf@321",
+                                    "company_id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/forgot_password": {
+            "post": {
+                "operationId": "forgotpassword",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "email": "strip23@gmail.com",
+                                    "company_id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/resetpass": {
+            "post": {
+                "operationId": "resetpassword",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "password": "Asdf@321",
+                                    "token": "d3846bc8c77e4e994b2c42f2ccc9d524"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/signupvalidation": {
+            "post": {
+                "operationId": "customerregistration",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "first_name": "Jhon",
+                                    "last_name": "tom",
+                                    "email": "test@test.com",
+                                    "password": "123456",
+                                    "company_id": "1",
+                                    "promo_id": "",
+                                    "promocode": "",
+                                    "role_id": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/subscription": {
+            "post": {
+                "operationId": "stripe_payment",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id":1,
+                                    "customer_id":12000712,
+                                    "email":"API2@mailinator.com",
+                                    "first_name":"API",
+                                    "last_name":"API2",
+                                    "password":"Asdf@321",
+                                    "plan_id":2,
+                                    "promo_id":null,
+                                    "stripeToken":"tok_1HyAUDGEoSQjz0Pty0dUMDoe",
+                                    "subscription_type":"paid",
+                                    "updatepayment":1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/customerprofile": {
+            "post": {
+                "operationId": "get_customer_profile",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "customer_id":12000712
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/user/updatecustomer": {
+            "post": {
+                "operationId": "update_customer_profile",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "profileimg": "",
+                                        "customer_id": "123456",
+                                        "email": "tert@dfgd.com",
+                                        "first_name": "test",
+                                        "last_name": "tert"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/changepassword": {
+            "post": {
+                "operationId": "update_password",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456",
+                                        "password": "asdfre"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/stripeSubscription": {
+            "post": {
+                "operationId": "getstripesubscription",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+
+
+        "/api/pausesubscription": {
+            "post": {
+                "operationId": "pausesubscription",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456",
+                                        "month": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/resumesubscription": {
+            "post": {
+                "operationId": "resumesubscription",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/cancelsubscription": {
+            "post": {
+                "operationId": "cancelsubscription",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/upgradesubscription": {
+            "post": {
+                "operationId": "upgradesubscription",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456",
+                                        "company_id": "1",
+                                        "plan_id": "1",
+                                        "stripeToken": "1",
+                                        "subscription_type": "1"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/updatecard": {
+            "post": {
+                "operationId": "updatecard",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id": "123456",
+                                        "company_id": "1",
+                                        "plan_id": "2",
+                                        "stripeToken": "tok_1HyAlCGEoSQjz0PtzvaYkTB6"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/getDashboardMapAPI/12000338": {
+            "get": {
+                "operationId": "getDashboardMap",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object"
+                                
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/getDashboardMapAPI/12000338?toggle_active=0": {
+            "get": {
+                "operationId": "getDashboardMapAPI",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/internationalAirports/1": {
+            "get": {
+                "operationId": "internationalAirports",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/nearByAirports/1": {
+            "post": {
+                "operationId": "nearByAirports",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    
+                                },
+                                "type": "object",
+                                "example": {
+                                    "miles": "500",
+                                    "airport_id": "7",
+                                    "customer_id": "12000338"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/storeUserMultipleAirportPreferences/12000712": {
+            "post": {
+                "operationId": "storeUserMultipleAirportPreferences",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "airports":[
+                                        {"airport_id": "22", "status": true},
+                                        {"airport_id": "34", "status": true},
+                                        {"airport_id": "67", "status": true},
+                                        {"airport_id": "85", "status": true},
+                                        {"airport_id": "7", "status": true}
+                                        ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/storeUserAirportPreferences/12000338": {
+            "post": {
+                "operationId": "storeAirportDomestic",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "airport_id": "84",
+                                    "list_id": "5",
+                                    "status": "false",
+                                    "type": "domestic"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/storeUserAirportPreferences/12000712": {
+            "post": {
+                "operationId": "storeAirportinternational",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "airport_id": "84",
+                                    "list_id": "5",
+                                    "status": "false",
+                                    "type": "international"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+
+        "/api/saveTravelProfileInformation": {
+            "post": {
+                "operationId": "saveTravelProfileInformation",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "customer_id":12000712,
+                                        "primary_airport":"Albany, New York (ALB) — Small",
+                                        "route_preference":"One-Stop",
+                                        "travellist": {
+                                            "airlines_list[0]":27
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/activeCampaignListSubscription": {
+            "post": {
+                "operationId": "activeCampaignListSubscription",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "example": {
+                                        "contactList": {
+                                            "contact":"721",
+                                            "list":"8",
+                                            "status":2
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/deals": {
+            "post": {
+                "operationId": "Create_Deal",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "title": "Summer deal",
+                                    "price": "40",
+                                    "company": "1",
+                                    "ticket_type": "Basic Economy",
+                                    "source": "2",
+                                    "destination": "7",
+                                    "duration_from": "2020-07-24",
+                                    "duration_to": "2020-08-24",
+                                    "deals_airlines[0][airline]": "1",
+                                    "deals_airlines[1][airline]": "2",
+                                    "user_type": "Paid",
+                                    "type": "Domestic",
+                                    "booking_links": "https://www.google.com/, yahoo.com",
+                                    "departure_airports[0][airport]": "11",
+                                    "departure_airports[0][price]": "38",
+                                    "departure_airports[1][airport]": "31",
+                                    "departure_airports[1][price]": "35",
+                                    "featured_image": "/C:/Users/HP/Downloads/the-test-fun-for-friends-screenshot.png"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/deals/2": {
+            "get": {
+                "operationId": "micro_deal_view",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/deals/1": {
+            "put": {
+                "operationId": "micri_putupdate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "title": "Test Deal",
+                                    "price": "4000",
+                                    "code": "BZRR1234",
+                                    "company": "1",
+                                    "ticket_type": "economy",
+                                    "source": "2",
+                                    "destination": "7",
+                                    "duration": "MARCH-APRIL",
+                                    "airlines": "INDIGO",
+                                    "type": "DOMESTIC",
+                                    "booking_links": "https://www.googles.com/"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/deals/5": {
+            "delete": {
+                "operationId": "micro_delete",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/deals/search": {
+            "post": {
+                "operationId": "micro_searchbytitle",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "title": "Deal Test"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airports": {
+            "post": {
+                "operationId": "micro_create_airport",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "country": "ddd",
+                                    "city": "4000",
+                                    "name": "BZRR1234",
+                                    "IATA": "1",
+                                    "ticket_type": "economy",
+                                    "longitude": "2",
+                                    "latitude": "7",
+                                    "type": "MARCH-APRIL",
+                                    "time_zone": "INDIGO"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airports/1": {
+            "delete": {
+                "operationId": "micro_airport_delete",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airports/5": {
+            "get": {
+                "operationId": "micro_airport_getairport",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airports/companywise/2": {
+            "get": {
+                "operationId": "micrip_companywise",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airports/domestic/1": {
+            "get": {
+                "operationId": "micro_domestic",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airports/search": {
+            "post": {
+                "operationId": "micro_search_airports",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "Mumbai airport"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airlines": {
+            "get": {
+                "operationId": "micro_airlines2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airlines/1": {
+            "get": {
+                "operationId": "micro_airlines_by_id",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airlines/125": {
+            "put": {
+                "operationId": "updateairlenis",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "HHHH"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airlines/126": {
+            "delete": {
+                "operationId": "delete_airlines",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/api/airlines/search": {
+            "post": {
+                "operationId": "seach_airlines_by_title",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "Air Canada"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+        "/oauth/token": {
+            "post": {
+                "operationId": "token_auth_login",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "username": "asd@asd.com",
+                                    "password": "asws55",
+                                    "grant_type": "pass",
+                                    "client_id": "8",
+                                    "client_secret": "pATJeDNqG9ddddUJ45fg545er9Gr2Qu3lXxCaWC0UGS"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com/deals"
+                    }
+                ]
+            }
+        },
+
+
+
+        "/api/admin/users/login": {
+            "post": {
+                "operationId": "admin_login",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "email": "test@test.com",
+                                    "password": "123456"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/admin/company/addnew": {
+            "post": {
+                "operationId": "admin_add_new_company",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "contact_number": {
+                                        "type": "string"
+                                    },
+                                    "website_url": {
+                                        "type": "string"
+                                    },
+                                    "address": {
+                                        "type": "string"
+                                    },
+                                    "owner_name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "company_logo": {
+                                        "type": "string"
+                                    },
+                                    "app_url": {
+                                        "type": "string"
+                                    },
+                                    "live_agent_url": {
+                                        "type": "string"
+                                    },
+                                    "stripe_publishable_key": {
+                                        "type": "string"
+                                    },
+                                    "stripe_secret_key": {
+                                        "type": "string"
+                                    },
+                                    "prefix": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name": "test@test.com",
+                                    "contact_number": "123456",
+                                    "website_url": "123456",
+                                    "address": "123456",
+                                    "owner_name": "123456",
+                                    "email": "123456",
+                                    "company_logo": "123456",
+                                    "app_url": "123456",
+                                    "live_agent_url": "123456",
+                                    "stripe_publishable_key": "123456",
+                                    "stripe_secret_key": "123456",
+                                    "prefix": "123456"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/company/editcompany": {
+            "post": {
+                "operationId": "admin_add_new_company2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "company_id": {
+                                        "type": "integer"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "contact_number": {
+                                        "type": "string"
+                                    },
+                                    "website_url": {
+                                        "type": "string"
+                                    },
+                                    "address": {
+                                        "type": "string"
+                                    },
+                                    "owner_name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "company_logo": {
+                                        "type": "string"
+                                    },
+                                    "app_url": {
+                                        "type": "string"
+                                    },
+                                    "live_agent_url": {
+                                        "type": "string"
+                                    },
+                                    "stripe_publishable_key": {
+                                        "type": "string"
+                                    },
+                                    "stripe_secret_key": {
+                                        "type": "string"
+                                    },
+                                    "prefix": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": "3",
+                                    "name": "test@test.com",
+                                    "contact_number": "123456",
+                                    "website_url": "123456",
+                                    "address": "123456",
+                                    "owner_name": "123456",
+                                    "email": "123456",
+                                    "company_logo": "123456",
+                                    "app_url": "123456",
+                                    "live_agent_url": "123456",
+                                    "stripe_publishable_key": "123456",
+                                    "stripe_secret_key": "123456",
+                                    "prefix": "123456"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/company/view": {
+            "post": {
+                "operationId": "admin_view_company",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "id": "5"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/company/companylist": {
+            "post": {
+                "operationId": "admin_list_company",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/manage": {
+            "post": {
+                "operationId": "admin_manage_users",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/addnew": {
+            "post": {
+                "operationId": "admin_addnew_users",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "email":"raj@testing.com",
+                                    "password":"123456",
+                                    "company_id":"1",
+                                    "user_type_id":"0",
+                                    "first_name":"",
+                                    "last_name":""
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/edit": {
+            "post": {
+                "operationId": "admin_edit_users",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "email":"raj@testing.com",
+                                    "password":"123456",
+                                    "company_id":"1",
+                                    "user_type_id":"0",
+                                    "first_name":"",
+                                    "last_name":"",
+                                    "id": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/viewdetails": {
+            "post": {
+                "operationId": "admin_viewdetails",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "id": "19"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/deleteusertype": {
+            "post": {
+                "operationId": "admin_deleteusertype",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "user_type_id": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/newusertype": {
+            "post": {
+                "operationId": "admin_newusertype",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": 1,
+                                    "name": "admin"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/editusertype": {
+            "post": {
+                "operationId": "admin_editusertype",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": 1,
+                                    "name": "admin",
+                                    "user_type_id":2
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/viewusertype": {
+            "post": {
+                "operationId": "admin_viewusertype",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "user_type_id": 7
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/company/changestatus": {
+            "post": {
+                "operationId": "admin_changestatus",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": 1,
+                                    "status": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/company/deletecompany": {
+            "post": {
+                "operationId": "admin_deletecompany",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": 7
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/deleteuser": {
+            "post": {
+                "operationId": "admin_deleteuser2",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "user_id": 7
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/changepass": {
+            "post": {
+                "operationId": "admin_changepass",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "new_pass":"12345678",
+                                    "confirm_pass":"12345678",
+                                    "old_pass":"1111"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/users/updateprofile": {
+            "post": {
+                "operationId": "admin_updateprofile",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "name":"Super Admin",
+                                    "email":"admin@mail.com"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/packages/manage": {
+            "post": {
+                "operationId": "admin_pack_manage",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/packages/addnew": {
+            "post": {
+                "operationId": "admin_pack_addnew",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "subscription_type":"year",
+                                    "subscription_name":"Sliver",
+                                    "description":"any extra feature",
+                                    "status":0,
+                                    "price":12
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/packages/edit": {
+            "post": {
+                "operationId": "admin_pack_edit",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "subscription_type":"year",
+                                    "subscription_name":"Sliver",
+                                    "description":"any extra feature",
+                                    "status":0,
+                                    "price":12,
+                                    "id": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/packages/viewdetails": {
+            "post": {
+                "operationId": "admin_pack_viewdetails",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "id": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/packages/deletepackage": {
+            "post": {
+                "operationId": "admin_deletepackage",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "id": 7
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+        "/api/admin/packages/changestatus": {
+            "post": {
+                "operationId": "admin_pack_changestatus",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "id": 7,
+                                    "status": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+
+
+        "/api/admin/customers/viewdetails": {
+            "post": {
+                "operationId": "customer_list",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "company_id": 7,
+                                    "page_number": 1,
+                                    "per_page": 10
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+        "/api/admin/users/viewuser": {
+            "post": {
+                "operationId": "customer_detail",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+
+                                },
+                                "type": "object",
+                                "example": {
+                                    "customer_id": 1000010
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "servers": [
+                    {
+                        "url": "https://api.pomelodev.com"
+                    }
+                ]
+            }
+        },
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}

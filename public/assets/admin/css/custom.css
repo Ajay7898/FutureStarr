@@ -1,0 +1,57 @@
+.receiver_div > span {
+  background-color: #f2f2f2;
+  border-radius: 0 20px 20px;
+  padding: 5px 20px;
+  float: left;
+}
+
+.sender_div > span {
+  background-color: #070725;
+color: #fff;
+  border-radius: 20px 20px 0;
+  padding: 5px 20px;
+  float: right;
+}
+.chat_btn_send{
+    height: 40px;
+margin-top: 5px;
+}
+
+.chat_row {
+    margin: 15px 0;
+    position: relative;
+    display: inline-block;
+}
+.chat_wrapper{
+    max-height: 500px;
+overflow-y: scroll;
+margin-bottom: 15px;
+}
+.message_time {
+    position: absolute;
+    top: -18px;
+}
+.receiver_div .message_time {
+    left: 18px;
+}
+.sender_div .message_time {
+    right: 18px;
+}
+.message{
+  width: 100%;
+}
+
+#load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: url(../../../assets/images/loading.gif) no-repeat center center rgba(0, 0, 0, .25)
+}
+
+.w-5{
+  width: 25px;
+}
+.h-5{
+  height: 25px;
+}

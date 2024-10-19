@@ -1,0 +1,2221 @@
+{
+	"info": {
+		"_postman_id": "02632ff5-5861-405d-a936-8b7191b5f56d",
+		"name": "FuturestarrQA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Module",
+			"item": [
+				{
+					"name": "User Role Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExNTcwODU5LCJleHAiOjM2MDE2MTE1NzA4NTksIm5iZiI6MTYxMTU3MDg1OSwianRpIjoiS0lWOXdKaEJ0SnFtUm5mciJ9.nMTaIHXOeIDN78hGiAEAJBvoMFB3gNCfBlS1P3eChAo"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_id\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/update-role",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update-role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Picture Change",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MjAsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExNDk4MzEyLCJleHAiOjM2MDE2MTE0OTgzMTIsIm5iZiI6MTYxMTQ5ODMxMiwianRpIjoiOWs5ZXA5eW5XU0RrMXp2MiJ9.jCHRfbYxLCbbahpfJbUs_snEZKw9z62np_CLlqCpAxA"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile_pic",
+									"type": "file",
+									"src": "/C:/Users/tiyas/Desktop/71970810_2435056199910112_8927073401428770816_o.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/picture",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"picture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExODU5NjYyLCJleHAiOjM2MDE2MTE4NTk2NjIsIm5iZiI6MTYxMTg1OTY2MiwianRpIjoib3ZyVExxdTZTTldoektxYiJ9.USVzOEHsprh-CXDxydrK2Rqp6nEbrWg00Sz3HfWwJ5g",
+								"type": "text"
+							},
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/info",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manage Public Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExNzgwMTA0LCJleHAiOjM2MDE2MTE3ODAxMDQsIm5iZiI6MTYxMTc4MDEwNCwianRpIjoiVG4wNzRqd0NXUUh4c3lsQyJ9.EZf46x_X9JCFOY-PttfCRoWYg9p0aGAPot4bDxnOemQ",
+								"type": "text"
+							},
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/manage-public-profile",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"manage-public-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Public Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"url": {
+							"raw": "{{_base_url}}/api/v1/public-profile/stars-band-f1263317c8d/profile",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"public-profile",
+								"stars-band-f1263317c8d",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Public Profile Buyer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"url": {
+							"raw": "{{_base_url}}/api/v1/public-profile/buyer-futurestarr-e77a3cadfc4/profile",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"public-profile",
+								"buyer-futurestarr-e77a3cadfc4",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Account Edit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MjAsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExNTc3ODY2LCJleHAiOjM2MDE2MTE1Nzc4NjYsIm5iZiI6MTYxMTU3Nzg2NiwianRpIjoia1pQYWQ3bTBNM2M0dmtpMiJ9.4UdBQ06cVfe5KErfJFpV04YMpFq3N6hS6x76LGD7Zes"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"BuyerSatyajit\",\r\n    \"bio_information\":\"Hello, I am buyer. I want to buy somr great talents.\",\r\n    \"first_name\":\"Satyajit\",\r\n    \"last_name\":\"Dey\",\r\n    \"email\":\"satyajit.dey0@gmail.com\",\r\n    \"address\":\"Kolkata\",\r\n    \"city\":\"Kolkata\",\r\n    \"state\":\"WestBengal\",\r\n    \"zip_code\":\"123456\",\r\n    \"phone\":\"9876543210\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user-account-update",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user-account-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Mangae Profile Image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExODYzOTU2LCJleHAiOjM2MDE2MTE4NjM5NTYsIm5iZiI6MTYxMTg2Mzk1NiwianRpIjoiMXFYb0JPWWJFQU9LYVp1ZCJ9.0Al9rE9Gnv-oQh9BsUyXlB9E1rKC7LWMzhEy0bI-3t8",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "encode_image",
+									"type": "file",
+									"src": "/C:/Users/tiyas/Downloads/Banner/background-2462431_1280.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/store-public-profile-image",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"store-public-profile-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Mangae Profile Bio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExODYzOTU2LCJleHAiOjM2MDE2MTE4NjM5NTYsIm5iZiI6MTYxMTg2Mzk1NiwianRpIjoiMXFYb0JPWWJFQU9LYVp1ZCJ9.0Al9rE9Gnv-oQh9BsUyXlB9E1rKC7LWMzhEy0bI-3t8",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bio_video",
+									"type": "file",
+									"src": "/C:/Users/tiyas/Downloads/file_example_MP4_480_1_5MG.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/store-public-profile-bio",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"store-public-profile-bio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Mangae Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExODYzOTU2LCJleHAiOjM2MDE2MTE4NjM5NTYsIm5iZiI6MTYxMTg2Mzk1NiwianRpIjoiMXFYb0JPWWJFQU9LYVp1ZCJ9.0Al9rE9Gnv-oQh9BsUyXlB9E1rKC7LWMzhEy0bI-3t8",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bio_video\":\"userImage/video-bio/dd111e8e45b1d1c8f5110234add58c95.mp4\",\r\n    \"encode_image\":\"userImage/banner/c275a9ebf819659dbc8029553c193bea.jpg\",\r\n    \"bio_info\":\"Hi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/store-public-profile",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"store-public-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNjg2MzQyLCJleHAiOjM2MDE2MTI2ODYzNDIsIm5iZiI6MTYxMjY4NjM0MiwianRpIjoiQUIzcUQwN2FkNXZyV1o0TyJ9.qjx1V9vNjGhLl_aLg0nvFODpAUPefPWg8QCWYtTzWBI",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"posted_by\":\"45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/follow-user",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"follow-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Cover Picture",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MjAsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExMTQ2NzE5LCJleHAiOjM2MDE2MTExNDY3MTksIm5iZiI6MTYxMTE0NjcxOSwianRpIjoibFhPTjJXdzFWR0k0RTdqNSJ9.2esgcnAFrd9mmFyGVZEA7J2XJ2KqLW2Wc8Q7S95b7PI"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "encode_image",
+									"type": "file",
+									"src": "/C:/Users/tiyas/Desktop/zEoHKFUQct6osXGA.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/edit-cover-pic",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"edit-cover-pic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Riders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzMTYwNjk3LCJleHAiOjM2MDE2MTMxNjA2OTcsIm5iZiI6MTYxMzE2MDY5NywianRpIjoidHV2TVUzM1FEU2NoYmFPayJ9.-6hQ9_jwjZiLlhKm3Y-n10SlWUiTInZb4veyy8inXyI"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/riders?user_id=45&per_page=10&page=1",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"riders"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "45"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Following",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNjg1ODcwLCJleHAiOjM2MDE2MTI2ODU4NzAsIm5iZiI6MTYxMjY4NTg3MCwianRpIjoibnF0T2pUZmJLSVJIdnZaUiJ9.1TOVWal2--6Ymy_sFpVrzrQrCE04Ip4U2d5z-wltHvo"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/followings?per_page=10&page=1",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"followings"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNjg2MzQyLCJleHAiOjM2MDE2MTI2ODYzNDIsIm5iZiI6MTYxMjY4NjM0MiwianRpIjoiQUIzcUQwN2FkNXZyV1o0TyJ9.qjx1V9vNjGhLl_aLg0nvFODpAUPefPWg8QCWYtTzWBI"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/unfollow-user/45",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"unfollow-user",
+								"45"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth Module",
+			"item": [
+				{
+					"name": "LinkedIn Register/ Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accessToken\": \"AQWvILVcLqJKv1d-jEG67AnaDTrvVuSa7_eLC7HwqiePxIK5UVXUeb92W3rpa1qEFserpbLKUSdYHLEh4WBiuRX3UCfHlsoAacB9DmFPjpA_khIL3hm6Fv-VxxnYRt-woJk_8hBHy5vv4p1hdQ0RLffAZfhwzQuyzghBJyZnIUDzMTN75tZOfsTMrYxIpLLH1iAp6HTlXZuE7DekFKvpS3I7j3oJVQTFI4GCJEfZiGtiviYQ-QnhDVdmaG39RK3FCMr5E15KNcL2A98gG_jiXNd5eBbziVkVZ-bsMvAoEa7-M5MN_EkaQu5SbROQSUOsLj-gYrT-ecixxGlDQI7f55dGqdbLPA\",\r\n    \"provider\": \"linkedin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/linkedin_register",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"linkedin_register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Facebook Register/ Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accessToken\": \"EAACsEhYQps8BAJZBwCuGlUZBZAUXsx373zcwyZCZAm5crjIEmsog4ZB2JnbLC4Q0yeZCqoFKoNNC0yXeUWz7zZAtvVm08TKeHNJ7D9ZA6LZBZBgfL68Eq45Ur14Mp0kcKwt8ssOPWleWiUMZAVRJY96DubRLQfSZC2Yza1cvTdV8c5D0EDJlQO16TmWvum4GiGs4qg5QWoQgXkYN0QEe0K8oTAaGqwrQ36WsrjGz5ldcZCCci9YAZDZD\",\r\n    \"provider\": \"facebook\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/facebook_register",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"facebook_register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Satyajit\",\r\n    \"last_name\":\"Dey\",\r\n    \"email\":\"satyajit.dey9@gmail.com\",\r\n    \"username\":\"hello\",\r\n    \"password\":\"123123123\",\r\n    \"password_confirmation\":\"123123123\",\r\n    \"role\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MjAsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyIiwiaWF0IjoxNjEwMDIyMzIyLCJleHAiOjM2MDE2MTAwMjIzMjIsIm5iZiI6MTYxMDAyMjMyMiwianRpIjoiSzgwNnJITUFiaEhVNjVtVCJ9.dFOAH8b68yOGaRITK_gjZwpBRUV8mKBUNf-AJiTThXY"
+							},
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/logout",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"five_seller@fiveexceptions.com\",\r\n    \"password\": \"Indore@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/login",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExNTcwNTYzLCJleHAiOjM2MDE2MTE1NzA1NjMsIm5iZiI6MTYxMTU3MDU2MywianRpIjoiOE5pOGxMYkprUHp6Z3prdiJ9.l89Ca40HMnuAG2en2OYZZVdiEFCIgSIwDxM5UxyabjA",
+								"type": "text"
+							},
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"current_password\":\"12345678\",\r\n    \"password\":\"123123123\",\r\n    \"password_confirmation\":\"123123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/changePassword",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"123123123\",\r\n    \"password_confirmation\":\"123123123\",\r\n    \"token\":\"d9c16c80f4fe9c85010bb6d7f217582b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/reset-password",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"satyajit.dey0@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/user/forgot-password",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buyer Module",
+			"item": [
+				{
+					"name": "Buyer Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQ1LCJpc3MiOiJodHRwOi8vYXBpLmZ1dHVyZXN0YXJyLmNvbS9hcGkvdjEvdXNlci9sb2dpbiIsImlhdCI6MTYxMjU0ODExOSwiZXhwIjozNjAxNjEyNTQ4MTE5LCJuYmYiOjE2MTI1NDgxMTksImp0aSI6Im4wTkJYWHYzY2dEM0ppSXoifQ._yN62I4phnWUHyMczN57KA8j3UzPB8YdLm4xE3bJNd4"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/buyer-account/details",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"buyer-account",
+								"details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seller Module",
+			"item": [
+				{
+					"name": "Social Buzz",
+					"item": [
+						{
+							"name": "Social Buzz Listing By Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzMDc3Mzk3LCJleHAiOjM2MDE2MTMwNzczOTcsIm5iZiI6MTYxMzA3NzM5NywianRpIjoiTDYzVXNmcllRU2xRc0p6NSJ9.qUaEsjbJHBDSNJ5kzyOUigywLhxmJu5kQ3xX3LW9jfQ"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz/5/listing",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz",
+										"5",
+										"listing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get SocailBuzz Comments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjg3MTQ2LCJleHAiOjM2MDE2MTIyODcxNDYsIm5iZiI6MTYxMjI4NzE0NiwianRpIjoiOFdxMDU3TGdheDJLUDdNTCJ9.wQEFYtXUWTgiTpWWAttPqEkGr0qElH9xlnGCWd1FeLQ"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz-comments/243/listing",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz-comments",
+										"243",
+										"listing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get SocialBuzz Awards",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjgzMDIzLCJleHAiOjM2MDE2MTIyODMwMjMsIm5iZiI6MTYxMjI4MzAyMywianRpIjoibWVCdEVkeERZdEhBSU9LOSJ9.gBo7Wl3wxRlipH-rlqXqJeIZE9UNQRpmVIqmE3-EKUg"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz-awards/236/listing",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz-awards",
+										"236",
+										"listing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SocialBuzz Product Listing",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjg3MTQ2LCJleHAiOjM2MDE2MTIyODcxNDYsIm5iZiI6MTYxMjI4NzE0NiwianRpIjoiOFdxMDU3TGdheDJLUDdNTCJ9.wQEFYtXUWTgiTpWWAttPqEkGr0qElH9xlnGCWd1FeLQ"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz-product-listing",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz-product-listing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Social Buzz Comments",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjg3MTQ2LCJleHAiOjM2MDE2MTIyODcxNDYsIm5iZiI6MTYxMjI4NzE0NiwianRpIjoiOFdxMDU3TGdheDJLUDdNTCJ9.wQEFYtXUWTgiTpWWAttPqEkGr0qElH9xlnGCWd1FeLQ"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"comment\":\"Test comment 8\",\r\n    \"social_buzz_id\":\"243\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz-comment",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz-comment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post SocialBuzz Award",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjg3MTQ2LCJleHAiOjM2MDE2MTIyODcxNDYsIm5iZiI6MTYxMjI4NzE0NiwianRpIjoiOFdxMDU3TGdheDJLUDdNTCJ9.wQEFYtXUWTgiTpWWAttPqEkGr0qElH9xlnGCWd1FeLQ"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"social_buzz_id\":\"243\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz-award",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz-award"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SocialBuzz Report",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjgzMDIzLCJleHAiOjM2MDE2MTIyODMwMjMsIm5iZiI6MTYxMjI4MzAyMywianRpIjoibWVCdEVkeERZdEhBSU9LOSJ9.gBo7Wl3wxRlipH-rlqXqJeIZE9UNQRpmVIqmE3-EKUg"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"social_buzz_id\":\"236\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/social-buzz-report",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-buzz-report"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Social Buzz",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjg3MTQ2LCJleHAiOjM2MDE2MTIyODcxNDYsIm5iZiI6MTYxMjI4NzE0NiwianRpIjoiOFdxMDU3TGdheDJLUDdNTCJ9.wQEFYtXUWTgiTpWWAttPqEkGr0qElH9xlnGCWd1FeLQ"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "social_buzz_id",
+											"value": "243",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "Test Comment 79",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "media_file",
+											"type": "file",
+											"src": "/C:/Users/tiyas/Downloads/Banner/universe-1566161_1280.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/update-social-buzz",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"update-social-buzz"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Social Buzz",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MTQsImlzcyI6Imh0dHA6Ly93d3cuZnV0dXJlc3RhcnJhcGkudGxkL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMjgzMDIzLCJleHAiOjM2MDE2MTIyODMwMjMsIm5iZiI6MTYxMjI4MzAyMywianRpIjoibWVCdEVkeERZdEhBSU9LOSJ9.gBo7Wl3wxRlipH-rlqXqJeIZE9UNQRpmVIqmE3-EKUg"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "social_buzz_id",
+											"value": "236",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "Test Comment 7",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "media_file",
+											"type": "file",
+											"src": "/C:/Users/tiyas/Downloads/Banner/universe-1566161_1280.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/update-social-buzz",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"update-social-buzz"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Add Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzNzUxODA2LCJleHAiOjM2MDE2MTM3NTE4MDYsIm5iZiI6MTYxMzc1MTgwNiwianRpIjoiS0F3T1c2amVNbXp2dUJpayJ9.zDfe31cFub4fzFUwoSgQi7YP16tFk9JXGYBCK0TCd_I",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category\":\"4\",\r\n    \"title\":\"Test Product On The Website 376683\",\r\n    \"description\":\"I am seller who love music. Big fan of legend 2PAC.\",\r\n    \"price\":\"134\",\r\n    \"product_info\":\"This is the test product to test on website with all aspects.\",\r\n    \"facebookLink\":\"facebook\",\r\n    \"instagramLink\":\"instagram\",\r\n    \"twitterLink\":\"twitter\",\r\n    \"sampleproduct\":\"uploads/seller-video/9dc43ce58950eae7cc8334b188a03035.mp4\",\r\n    \"uploadproduct\":\"uploads/seller-product-media/2372ae989c84bfc96a6b7d4af610e711.pdf\",\r\n    \"commercial\":\"uploads/commercial-product/9b9bbdd280acc21e3fb19de841c48eac.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/store-product",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"store-product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzODk2Nzc0LCJleHAiOjM2MDE2MTM4OTY3NzQsIm5iZiI6MTYxMzg5Njc3NCwianRpIjoiZ3BkdkVwT215Q0dtcU9JRCJ9.eEGhrsoPAfPMoTyi__3BqeKIBI3LYqhluqsfOO39VxM",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"talent_id\":\"30\",\r\n    \"category\":\"4\",\r\n    \"title\":\"Test Product On The Website 2001\",\r\n    \"description\":\"I am seller d who love music g. Big fan of legend 2PAC.\",\r\n    \"price\":\"10\",\r\n    \"product_info\":\"This is the test product to test on website with all aspects.\",\r\n    \"sampleproduct\":\"uploads/seller-video/9dc43ce58950eae7cc8334b188a03035.mp4\",\r\n    \"uploadproduct\":\"uploads/seller-product-media/ad58dc43055957adf987834b7ff0ca88.jpg\",\r\n    \"commercial\":\"uploads/commercial-product/d0eaee2486e4f6acf7712838a5a252df.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/update-product",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"update-product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Bulk Delete Products",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNzI4NDQzLCJleHAiOjM2MDE2MTI3Mjg0NDMsIm5iZiI6MTYxMjcyODQ0MywianRpIjoiYmhMbnlhWXZ0amJUNkFYbiJ9.v37htFFc9EhGcNSJb0E9nzb3UlPkbQsZO8X8wDI6mJw",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"talent_id\":\"23,22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/bulk-delete-my-product",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bulk-delete-my-product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNzI4NDQzLCJleHAiOjM2MDE2MTI3Mjg0NDMsIm5iZiI6MTYxMjcyODQ0MywianRpIjoiYmhMbnlhWXZ0amJUNkFYbiJ9.v37htFFc9EhGcNSJb0E9nzb3UlPkbQsZO8X8wDI6mJw",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"talent_id\":\"21\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/bulk-delete-my-product",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bulk-delete-my-product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Product Logo/Commercial",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzODk2Nzc0LCJleHAiOjM2MDE2MTM4OTY3NzQsIm5iZiI6MTYxMzg5Njc3NCwianRpIjoiZ3BkdkVwT215Q0dtcU9JRCJ9.eEGhrsoPAfPMoTyi__3BqeKIBI3LYqhluqsfOO39VxM",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "commercial",
+											"type": "file",
+											"src": "/C:/Users/tiyas/Downloads/Banner/universe-1566161_1280.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/store-product-commercial",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"store-product-commercial"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload Product",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzODI4ODU1LCJleHAiOjM2MDE2MTM4Mjg4NTUsIm5iZiI6MTYxMzgyODg1NSwianRpIjoidFBtYVpVcm51eUIxMnc0VyJ9.0DbGDiHDX2aio17pvyNiSvyR0Ca8Q1myZR2IK7SQVgg",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "uploadproduct",
+											"type": "file",
+											"src": "/C:/Users/tiyas/Downloads/file_example_MP3_700KB.mp3"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/store-upload-product",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"store-upload-product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Products",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNzI4NDQzLCJleHAiOjM2MDE2MTI3Mjg0NDMsIm5iZiI6MTYxMjcyODQ0MywianRpIjoiYmhMbnlhWXZ0amJUNkFYbiJ9.v37htFFc9EhGcNSJb0E9nzb3UlPkbQsZO8X8wDI6mJw"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/my-product?per_page=10&page=1",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"my-product"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Categories",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyOTg1MTc4LCJleHAiOjM2MDE2MTI5ODUxNzgsIm5iZiI6MTYxMjk4NTE3OCwianRpIjoiQ2tURnJRM1Q2d1Yxa2JTQyJ9.vu30AHHk8l1OpUaNcmyYNlck41u5SqYUZT04dL5xoDY"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/categories",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Products By Days",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyNzI4NDQzLCJleHAiOjM2MDE2MTI3Mjg0NDMsIm5iZiI6MTYxMjcyODQ0MywianRpIjoiYmhMbnlhWXZ0amJUNkFYbiJ9.v37htFFc9EhGcNSJb0E9nzb3UlPkbQsZO8X8wDI6mJw"
+									},
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/my-product/2?per_page=10&page=1",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"my-product",
+										"2"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sample Product Upload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "FS-API-KEY",
+										"type": "text",
+										"value": "futurestarr"
+									},
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEzODI4ODU1LCJleHAiOjM2MDE2MTM4Mjg4NTUsIm5iZiI6MTYxMzgyODg1NSwianRpIjoidFBtYVpVcm51eUIxMnc0VyJ9.0DbGDiHDX2aio17pvyNiSvyR0Ca8Q1myZR2IK7SQVgg",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sampleproduct",
+											"type": "file",
+											"src": "/C:/Users/tiyas/Downloads/file_example_MP4_480_1_5MG.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{_base_url}}/api/v1/store-sample-product",
+									"host": [
+										"{{_base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"store-sample-product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Seller Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM4MjAsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjExNTc3ODY2LCJleHAiOjM2MDE2MTE1Nzc4NjYsIm5iZiI6MTYxMTU3Nzg2NiwianRpIjoia1pQYWQ3bTBNM2M0dmtpMiJ9.4UdBQ06cVfe5KErfJFpV04YMpFq3N6hS6x76LGD7Zes"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"url": {
+							"raw": "{{_base_url}}/api/v1/seller-account/details",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"seller-account",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Awards",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM5MDUsImlzcyI6Imh0dHA6Ly9hcGkuZnV0dXJlc3RhcnIuY29tL2FwaS92MS91c2VyL2xvZ2luIiwiaWF0IjoxNjEyMTA3NTAwLCJleHAiOjM2MDE2MTIxMDc1MDAsIm5iZiI6MTYxMjEwNzUwMCwianRpIjoiU2FEVWh1cnlCcFBaYmtFYSJ9.hOdGTw7r-q1aL312eRQopDsJOvLbY43ziNteRSvRWbo"
+							},
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/awards?per_page=10&page=1",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"awards"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Similar Product List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/similar-product-list/stars-band-f1263317c8d?per_page=10&page=1",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"similar-product-list",
+								"stars-band-f1263317c8d"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trending List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"type": "text",
+								"value": "futurestarr"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/trending-list/stars-band-f1263317c8d?per_page=10&page=1",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"trending-list",
+								"stars-band-f1263317c8d"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog Module",
+			"item": [
+				{
+					"name": "Get Blogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/blogs",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marketplace Module",
+			"item": [
+				{
+					"name": "Future Starr Marketplace",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "FS-API-KEY",
+								"value": "futurestarr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{_base_url}}/api/v1/futurestarr/marketplace",
+							"host": [
+								"{{_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"futurestarr",
+								"marketplace"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
